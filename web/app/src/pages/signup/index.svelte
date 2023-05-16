@@ -8,8 +8,20 @@
   import { GENDER_TEXTS } from "../../constants/gender";
   import Select, { Option } from "@smui/select";
 
+  let name="";
   let email = "";
   let password = "";
+  let tell="";
+  let post="";
+  let address1="";
+  let address2="";
+  let birth="";
+  let corp="";
+  let address3="";
+  let address4="";
+  let address5="";
+  let store="";
+
   let gender: "male" | "female" = "male";
   const shops = ["BaBaCafe"];
 
@@ -34,7 +46,7 @@
     class="w-[400px]"
     variant="standard"
     label="お名前"
-    bind:value={email}
+    bind:value={name}
   >
     <HelperText slot="helper">例）鈴木太郎</HelperText>
   </Textfield>
@@ -52,7 +64,7 @@
     class="mt-6 w-[400px]"
     variant="standard"
     label="メールアドレス"
-    bind:value={password}
+    bind:value={email}
   >
     <HelperText slot="helper">例）example@ex.com</HelperText>
   </Textfield>
@@ -61,7 +73,7 @@
     class="mt-6 w-[400px]"
     variant="standard"
     label="電話番号"
-    bind:value={password}
+    bind:value={tell}
   >
     <HelperText slot="helper">例）000-0000-0000</HelperText>
   </Textfield>
@@ -70,7 +82,7 @@
     class="mt-6 w-[400px]"
     variant="standard"
     label="郵便番号"
-    bind:value={password}
+    bind:value={post}
   >
     <HelperText slot="helper">例）000-0000</HelperText>
   </Textfield>
@@ -79,7 +91,7 @@
     class="mt-6 w-[400px]"
     variant="standard"
     label="住所１（都道府県・市区町村）"
-    bind:value={password}
+    bind:value={address1}
   >
     <HelperText slot="helper">例）秋田県山本郡三種町</HelperText>
   </Textfield>
@@ -88,7 +100,7 @@
     class="mt-6 w-[400px]"
     variant="standard"
     label="住所２（その他）"
-    bind:value={password}
+    bind:value={address2}
   >
     <HelperText slot="helper">例）下岩川長面台50</HelperText>
   </Textfield>
@@ -97,7 +109,7 @@
     class="mt-6 w-[400px]"
     variant="standard"
     label="生年月日"
-    bind:value={password}
+    bind:value={birth}
   >
     <HelperText slot="helper">例）19990101</HelperText>
   </Textfield>
@@ -131,7 +143,7 @@
       class="w-[400px] mt-6"
       variant="standard"
       label="農業法人名"
-      bind:value={email}
+      bind:value={corp}
     >
       <HelperText slot="helper">例）陽だまりマルシェ、Green家</HelperText>
     </Textfield>
@@ -140,7 +152,7 @@
       class="w-[400px] mt-6"
       variant="standard"
       label="郵便番号（農地）"
-      bind:value={email}
+      bind:value={address3}
     >
       <HelperText slot="helper">例）111-1111</HelperText>
     </Textfield>
@@ -149,7 +161,7 @@
       class="w-[400px] mt-6"
       variant="standard"
       label="農地住所"
-      bind:value={email}
+      bind:value={address4}
     >
       <HelperText slot="helper">例）秋田県山本郡三種町</HelperText>
     </Textfield>
@@ -158,7 +170,7 @@
       class="w-[400px] mt-6"
       variant="standard"
       label="農地住所2"
-      bind:value={email}
+      bind:value={address5}
     >
       <HelperText slot="helper">例）下岩川長面台50</HelperText>
     </Textfield>
@@ -167,7 +179,7 @@
       class="w-[400px] mt-6"
       variant="standard"
       label="店舗"
-      bind:value={email}
+      bind:value={store}
     >
       <Option value="" />
       {#each shops as shop}
